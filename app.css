@@ -1,0 +1,84 @@
+body {
+  background-color: white;
+  color: #8ea7c2;
+}
+
+.listHeader {
+  background-color: #4b367c;
+  color: #e1e1e6;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 3em;
+  text-align: center;
+  /* padding-bottom: 10px; */
+  margin-bottom: 5px;
+}
+.headerBtns {
+  background-color: #4b367c;
+  text-align: center;
+}
+.headerBtns btn-group {
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+.btn {
+  width: 170px;
+  color: #4b367c;
+  margin: 15px;
+}
+.circle {
+  border: 1px solid blue;
+  width: 10px;
+  height: 10px;
+  background: red;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+.twitchList {
+  font-family: "Oswald", sans-serif;
+  font-size: 12px;
+}
+
+.online {
+  padding-top: 10px;
+
+  background-color: #d7cceb;
+  color: #4b367c;
+  margin-bottom: 5px;
+}
+
+.offline {
+  padding-top: 10px;
+
+  background-color: #8ea7c2;
+  color: black;
+  margin-bottom: 5px;
+}
+.logo {
+  /* width: 50px; */
+  min-height: 65px;
+  min-width: 75px;
+  text-align: center;
+}
+
+.logo img {
+  height: 50px;
+  border: 3px solid #e1e1e6;
+
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+.nologo {
+  font-size: 10px;
+  /* line-height: 10px; */
+  margin-top: 10px;
+}
+.name {
+  height: 65px;
+}
+.streaming {
+  font-style: italic;
+}
