@@ -12,9 +12,9 @@ $(document).ready(function() {
     "noobs2ninjas"
   ];
 
-  // respond to button select All/Online/Offine
-  $(".btn-group button").click(function() {
-    update($(this).text());
+  // get selection
+  $(".selection input[type=radio]").on("change", function() {
+    update(this.value);
   });
 
   // Clear the channels previously listed and list the channels now selected
@@ -33,6 +33,7 @@ $(document).ready(function() {
         function(data) {
           // display channel if it is streaming and user requested all or online,
           // or if the channel is not streaming and the user requested offline only
+          console.log(data.stream);
           if (
             data.stream !== null &&
             (channels === "Online" || channels === "All")
@@ -55,7 +56,7 @@ $(document).ready(function() {
 
 function displaylogo(logo, style) {
   return (
-    '<div class="col-md-3 hidden-xs"></div><div class="col-md-1 col-sm-1 logo ' +
+    '<div class="col-xs-2 logo ' +
     style +
     '"><img src=' +
     logo +
@@ -67,7 +68,7 @@ function displayname(name, link, style) {
   // '<div class="col-md-1 col-sm-1 name ' +
 
   return (
-    '<div class="col-md-1 col-sm-1 name ' +
+    '<div class="col-xs-2 name ' +
     style +
     ' ">  <a  href="' +
     link +
@@ -79,7 +80,7 @@ function displayname(name, link, style) {
 
 function displaygame(game, status, style) {
   var div =
-    '<div class="col-md-4 streaming name ' +
+    '<div class="col-xs-8  streaming name ' +
     style +
     '">' +
     game +
@@ -97,7 +98,7 @@ function displaygame(game, status, style) {
 }
 
 function displayNoGame() {
-  return '<div class="col-md-4 col-xs-1 col-sm-2 offline name"> Offline  ';
+  return '<div class="col-xs-8  offline name"> Offline  ';
 }
 
 function displayChannel(online, link, logo, name, game, status) {
@@ -108,7 +109,7 @@ function displayChannel(online, link, logo, name, game, status) {
   else style = "offline";
 
   // construct div based on passed variables
-  displayDiv = "<div class='row '>";
+  displayDiv = "<div class='row channelRow'>";
 
   displayDiv += displaylogo(logo, style) + displayname(name, link, style);
 
@@ -117,6 +118,7 @@ function displayChannel(online, link, logo, name, game, status) {
 
   displayDiv += "</div>";
 
+  console.log(displayDiv);
   // Append it to the channels list displayed
   $(".twitchList").append(displayDiv);
 }

@@ -11,20 +11,22 @@ body {
   text-transform: uppercase;
   font-size: 3em;
   text-align: center;
-  /* padding-bottom: 10px; */
+  max-width: 700px;
+  margin: 0 auto;
   margin-bottom: 5px;
 }
 .headerBtns {
   background-color: #4b367c;
   text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
 }
 .headerBtns btn-group {
   padding-bottom: 0px;
   padding-top: 0px;
 }
 .btn {
-  width: 170px;
-  color: #4b367c;
+  background-color: white;
   margin: 15px;
 }
 .circle {
@@ -39,11 +41,17 @@ body {
 .twitchList {
   font-family: "Oswald", sans-serif;
   font-size: 12px;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.channelRow {
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .online {
   padding-top: 10px;
-
   background-color: #d7cceb;
   color: #4b367c;
   margin-bottom: 5px;
@@ -59,7 +67,7 @@ body {
 .logo {
   /* width: 50px; */
   min-height: 65px;
-  min-width: 75px;
+  /* min-width: 75px; */
   text-align: center;
 }
 

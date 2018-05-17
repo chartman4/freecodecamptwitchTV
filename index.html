@@ -20,19 +20,30 @@
 
 <body>
 	<div class="container-fluid">
-		<div class="row justify-content-center">
-			<div class="col-md-6 col-md-offset-3 col-xs-12 listHeader ">
-				<h1>Twitch Streamers</h1>
-			</div>
+		<div class="row listHeader ">
+			<h1>Twitch Streamers</h1>
 		</div>
-		<div class="row justify-content-center">
-			<div class="col-md-6 col-md-offset-3 col-xs-12 headerBtns">
-				<div class="btn-group btn-group" data-toggle="buttons-radio" role="group">
-					<button type="button" class="btn btn-large">All</button>
-					<button type="button" class="btn btn-large">Online</button>
-					<button type="button" class="btn btn-large">Offline</button>
-				</div>
+		<!-- <div class="row justify-content-center">
+			<div class="col-md-6 col-md-offset-3 col-xs-12 headerBtns"> -->
+		<div class="row headerBtns ">
+			<div class="btn-group btn-group-toggle selection" data-toggle="buttons">
+				<label class="btn btn-secondary active">
+					<input type="radio" name="options" id="option1" value="All" autocomplete="off" checked> All
+				</label>
+				<label class="btn btn-secondary">
+					<input type="radio" name="options" id="option2" value="Online" autocomplete="off"> Online
+				</label>
+				<label class="btn btn-secondary">
+					<input type="radio" name="options" id="option3" value="Offline" autocomplete="off"> Offline
+				</label>
 			</div>
+
+			<!-- <div class="btn-group btn-group" data-toggle="buttons-radio" role="group">
+				<button type="button" class="btn btn-primary btn-small">All</button>
+				<button type="button" class="btn btn-large">Online</button>
+				<button type="button" class="btn btn-large">Offline</button>
+			</div> -->
+			<!-- </div> -->
 		</div>
 		<div class=" twitchList">
 
